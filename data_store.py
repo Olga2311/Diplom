@@ -23,7 +23,6 @@ def create_tables(engine):
 
 create_tables(engine)
 
-"""добавление записи в бд"""
 def adder(profile_id, worksheet_id):
     engine = create_engine(DSN)
     Base.metadata.create_all(engine)
@@ -32,7 +31,6 @@ def adder(profile_id, worksheet_id):
         session.add(to_bd)
         session.commit()
 
-"""извлечение записей из БД"""
 def filter(profile_id):
     engine = create_engine(DSN)
     v_id = []
